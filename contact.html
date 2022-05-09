@@ -26,13 +26,13 @@
                 <a class="nav-link activeLink" aria-current="page" href="index.html">POČETNA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">O NAMA</a>
+                <a class="nav-link" href="index.html#about">O NAMA</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">BLOG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">ZAKAŽI SEANSU</a>
+                <a class="nav-link" href="search-doctors.html">ZAKAŽI SEANSU</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">KONTAKT</a>
@@ -48,11 +48,14 @@
                 <li class="nav-item pt-1">
                     <a class="nav-link" href="login.html"> PRIJAVA </a>
                 </li>
-                <a class="btn btn-primary btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
+                <a class="btn btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
            </ul>
           </div>
         </div>
       </nav>
+      <div class="container-fluid blue-banner">
+        <h1>Kontakt</h1>
+    </div>
       <!-- End Navbar -->
 <section class="contact">
     <div class="container">
@@ -68,33 +71,35 @@
                             </div>
                         </div>
                         <div class="contact-form p-5">
+                          <form action="" onsubmit="return false">
                             <div class="row my-4">
                                 <div class="col-lg-6">
                                     <input type="text" class="input" name="fname" id="fname" placeholder="Ime">
-                                    <span class="Focus-border"></span>
+                                    <span id="error-fname" class="error"></span>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 ">
                                     <input type="text"  class="input" name="lname" id="lname" placeholder="Prezime">
-                                    <span class="Focus-border"></span>
+                                    <span id="error-lname" class="error"></span>
                                 </div>
                             </div>
                             <div class="row my-4">
                                 <div class="col-lg-12">
                                     <input type="text" class="input" name="email" id="email" placeholder="Email">
-                                    <span class="Focus-border"></span>
+                                    <span id="error-email" class="error"></span>
                                 </div>
                             </div>
                             <div class="row my-4">
                                 <div class="col-lg-12">
                                     <textarea name="mess"class="input" id="mess" cols="30" rows="5" placeholder="Poruka..."></textarea>
-                                    <span class="Focus-border"></span>
+                                    <span id="error-mess" class="error"></span>
                                 </div>
                             </div>
                             <div class="row my-4">
                               <div class="col-lg-12">
-                                  <input type="submit" value="POŠALJI" id="btnContact">
+                                  <input type="submit" value="POŠALJI" id="btnContact" onclick="validateContact()">
                               </div>
                           </div>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -109,21 +114,21 @@
     <button class="btn btnFooterTop">ZAKAŽI BESPLATNU KONSULTACIJU</button>
   </div>
 </section>
-
+  
 <div class="conatiner-fluid" id="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90593.22323454234!2d20.4537856!3d44.8004096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1649259932605!5m2!1ssr!2srs" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <img src="img/mapa.png" alt="mapa">
 </div>
 <!-- Footer -->   
 <div class="container-fluid footer p-5">
 
   <div class="container">
   <footer> 
-      <div class="row">
-          <div class="col-md-6 mt-3">
+      <div class="row rowFooter">
+          <div class="col-md-6  mt-3 footerLogo">
               <img src="img/onlinemedica2.png" alt="logo">
           </div>
           
-          <div class="col-md-6 right mt-1 ">
+          <div class="col-md-6 right mt-1 footerText ">
               <h4 class="">PSIHOTERAPIJSKO SAVETOVALISTE</h4>
               <p class="textFooter ">Poverljivo psihoterapijsko savetovalište kome možeš da pristupaš sam/a iz svog doma, čak i potpuno anonimno.</p>
               <button class="btn btnFooter">ZAKAŽI BESPLATNU KONSULTACIJU</button>
@@ -132,9 +137,9 @@
   </footer>
 </div>
 </div>  
- <!-- Copyright -->
- <div class="container-fluid text-center mt-3 copyright">© 2022 Copyright WebMedica</div>
- <!-- Copyright -->  
+     <!-- Copyright -->
+     <div class="container-fluid text-center mt-3 copyright">© 2022 Copyright WebMedica</div>
+     <!-- Copyright --> 
 <!--END FOOTER-->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

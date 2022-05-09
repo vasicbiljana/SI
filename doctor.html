@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Font -->
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
   <body>
     <!-- Navbar -->
@@ -27,13 +26,13 @@
                 <a class="nav-link activeLink" aria-current="page" href="index.html">POČETNA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">O NAMA</a>
+                <a class="nav-link" href="index.html#about">O NAMA</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">BLOG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">ZAKAŽI SEANSU</a>
+                <a class="nav-link" href="search-doctors.html">ZAKAŽI SEANSU</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">KONTAKT</a>
@@ -49,11 +48,14 @@
                 <li class="nav-item pt-1">
                     <a class="nav-link" href="login.html"> PRIJAVA </a>
                 </li>
-                <a class="btn btn-primary btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
+                <a class="btn btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
            </ul>
           </div>
         </div>
       </nav>
+      <div class="container-fluid blue-banner">
+        <h1>Doktor</h1>
+    </div>
       <!-- End Navbar -->
 <section>
   <div class="container">
@@ -66,7 +68,7 @@
         <h3 class="mt-1 text-center">psiholog</h3>
         
         <div class="container">
-          <table class="table table-bordered mt-4">
+          <table class="table table-bordered mt-4" id="table">
             <thead>
                 <tr>
                     <th colspan="2"> Slobodni termini</th>
@@ -101,15 +103,23 @@
             </tbody>
         </table>
         <div class="container btn-box mb-5">
-          <button class="btnTermin">ZAKAŽI</button>
+          <a  href= "payment.html" class="btnTermin">ZAKAŽI</a>
         </div>
-  
-    
-        </div>
-
       </div>
     </div>
+    </div>
   </div>
+</section>
+<section>
+	<div class="container">
+		<div class="doctor-title mb-5">
+			<h2>Biografija</h2>
+		  </div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nobis omnis suscipit dolorem ut facilis vero reiciendis quasi minus. Ipsa autem necessitatibus dolores sint quaerat possimus quod nemo. Cumque, quibusdam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium voluptate esse, eaque labore quaerat distinctio quis molestiae vitae, reiciendis earum pariatur atque. Quisquam reiciendis nam veniam suscipit molestiae ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque impedit in et aliquam eligendi soluta voluptatem, fugit, consectetur repellendus facilis nostrum inventore sapiente aspernatur. Iste earum autem voluptatum. Assumenda.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium voluptate esse, eaque labore quaerat distinctio quis molestiae vitae, reiciendis earum pariatur atque. Quisquam reiciendis nam veniam suscipit molestiae ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi neque impedit in et aliquam eligendi soluta voluptatem, fugit, consectetur repellendus facilis nostrum inventore sapiente aspernatur. Iste earum autem voluptatum. Assumenda.</p>
+
+	</div>
 </section>
 <section>
   <div class="container-fluid p-5 mt-5" id="footerTop">
@@ -117,21 +127,21 @@
     <button class="btn btnFooterTop">ZAKAŽI BESPLATNU KONSULTACIJU</button>
   </div>
 </section>
-
+  
 <div class="conatiner-fluid" id="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90593.22323454234!2d20.4537856!3d44.8004096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1649259932605!5m2!1ssr!2srs" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <img src="img/mapa.png" alt="mapa">
 </div>
 <!-- Footer -->   
 <div class="container-fluid footer p-5">
 
   <div class="container">
   <footer> 
-      <div class="row">
-          <div class="col-md-6 mt-3">
+      <div class="row rowFooter">
+          <div class="col-md-6  mt-3 footerLogo">
               <img src="img/onlinemedica2.png" alt="logo">
           </div>
           
-          <div class="col-md-6 right mt-1 ">
+          <div class="col-md-6 right mt-1 footerText ">
               <h4 class="">PSIHOTERAPIJSKO SAVETOVALISTE</h4>
               <p class="textFooter ">Poverljivo psihoterapijsko savetovalište kome možeš da pristupaš sam/a iz svog doma, čak i potpuno anonimno.</p>
               <button class="btn btnFooter">ZAKAŽI BESPLATNU KONSULTACIJU</button>
@@ -140,9 +150,9 @@
   </footer>
 </div>
 </div>  
- <!-- Copyright -->
- <div class="container-fluid text-center mt-3 copyright">© 2022 Copyright WebMedica</div>
- <!-- Copyright -->  
+     <!-- Copyright -->
+     <div class="container-fluid text-center mt-3 copyright">© 2022 Copyright WebMedica</div>
+     <!-- Copyright --> 
 <!--END FOOTER-->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

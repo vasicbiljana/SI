@@ -26,13 +26,13 @@
                 <a class="nav-link activeLink" aria-current="page" href="index.html">POČETNA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">O NAMA</a>
+                <a class="nav-link" href="index.html#about">O NAMA</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">BLOG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">ZAKAŽI SEANSU</a>
+                <a class="nav-link" href="search-doctors.html">ZAKAŽI SEANSU</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">KONTAKT</a>
@@ -48,11 +48,14 @@
                 <li class="nav-item pt-1">
                     <a class="nav-link" href="login.html"> PRIJAVA </a>
                 </li>
-                <a class="btn btn-primary btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
+                <a class="btn btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
            </ul>
           </div>
         </div>
       </nav>
+      <div class="container-fluid blue-banner">
+        <h1>Kreiranje naloga</h1>
+    </div>
       <!-- End Navbar -->
    <section class="">
     <div class="container px-5  pb-5">
@@ -65,29 +68,33 @@
             <div class="col-12 col-lg-5 mt-2">
                 <div class="form">
                     <h3>Registruj se</h3><br>
-                <form>
+                <form onsubmit="return false">
                     <div class="mb-3">
-                      <input type="firstName" class="form-control" id="exampleInputEmail1" placeholder="Ime" aria-describedby="emailHelp">
-                      <div id="nameError" class="form-text"></div>
+                      <input type="text" class="form-control" id="fname-reg" placeholder="Ime" >
+                      <span id="error-fname-reg" class="error"></span>
                     </div>
                     <div class="mb-3">
-                        <input type="lastName" class="form-control" id="exampleInputEmail1" placeholder="Prezime" aria-describedby="emailHelp">
-                        <div id="lastNameError" class="form-text"></div>
+                        <input type="text" class="form-control" id="lname-reg" placeholder="Prezime">
+                        <span id="error-lname-reg" class="error"></span>
                       </div>
                       <div class="mb-3">
-                        <input type="phone" class="form-control" id="exampleInputEmail1" placeholder="Telefon" aria-describedby="emailHelp">
-                        <div id="phoneError" class="form-text"></div>
+                        <input type="text" class="form-control" id="phone-reg" placeholder="Telefon" >
+                        <span id="error-phone-reg" class="error"></span>
                       </div>
                       <div class="mb-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp">
-                        <div id="emailError" class="form-text"></div>
+                        <input type="email" class="form-control" id="email-reg" placeholder="Email">
+                        <span id="error-email-reg" class="error"></span>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" class="form-control" id="username-reg" placeholder="Korisničko ime">
+                        <span id="error-username-reg" class="error"></span>
                       </div>
                     <div class="mb-3">
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                      <div id="passwordError" class="form-text"></div>
+                      <input type="password" class="form-control" id="pass-reg" placeholder="Lozinka">
+                      <span id="error-pass-reg" class="error"></span>
                     </div>
                     <div class="mt-2">
-                        <button type="submit" class="btn btn-primary btnSubmitLogin">Registracija</button>
+                       <input type="submit" value="Registracija" class="btnSubmitLogin" id="btnRegistartion" onclick="validateRegistartion()">
                     </div>
                   </form> 
                 </div>
@@ -106,20 +113,21 @@
       </div>
     </section>
   
+  
     <div class="conatiner-fluid" id="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90593.22323454234!2d20.4537856!3d44.8004096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1649259932605!5m2!1ssr!2srs" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img src="img/mapa.png" alt="mapa">
     </div>
   <!-- Footer -->   
   <div class="container-fluid footer p-5">
   
       <div class="container">
       <footer> 
-          <div class="row">
-              <div class="col-md-6 mt-3">
+          <div class="row rowFooter">
+              <div class="col-md-6  mt-3 footerLogo">
                   <img src="img/onlinemedica2.png" alt="logo">
               </div>
               
-              <div class="col-md-6 right mt-1 ">
+              <div class="col-md-6 right mt-1 footerText ">
                   <h4 class="">PSIHOTERAPIJSKO SAVETOVALISTE</h4>
                   <p class="textFooter ">Poverljivo psihoterapijsko savetovalište kome možeš da pristupaš sam/a iz svog doma, čak i potpuno anonimno.</p>
                   <button class="btn btnFooter">ZAKAŽI BESPLATNU KONSULTACIJU</button>
@@ -130,7 +138,7 @@
   </div>  
      <!-- Copyright -->
      <div class="container-fluid text-center mt-3 copyright">© 2022 Copyright WebMedica</div>
-     <!-- Copyright -->  
+     <!-- Copyright --> 
   <!--END FOOTER-->
       <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebMedica</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light pt-2">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="img/onlinemedica.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link activeLink" aria-current="page" href="index.html">POČETNA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#about">O NAMA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="search-doctors.html">ZAKAŽI SEANSU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">KONTAKT</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0"> 
+                <li class="nav-item">
+                    <a class="nav-link phoneLink" href="#"> 
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        064/123-456
+                </a>
+                  </li>
+                <li class="nav-item pt-1">
+                    <a class="nav-link" href="login.html"> PRIJAVA </a>
+                </li>
+                <a class="btn btnLogin mt-2" href="registration.html"> REGISTRUJTE SE </a>
+           </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid blue-banner">
+        <h1>Pretraga doktora</h1>
+    </div>
+    <!-- End Navbar -->		
+		<!-- Page Content -->
+        <div class="content">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4 mt-2 p-2 category ">
+                        <h2>KATEGORIJE</h2>
+                        <div class="form-check">
+                            <h4>Specijalisti</h4>
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">Psihijatar</label>
+                          </div>
+
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">Psihoterapeut</label>
+                          </div>
+
+                         <div class="form-check">
+                            <h4>Specijalisti</h4>
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">Muško</label>
+                          </div>
+                          
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">Žensko</label>
+                          </div>
+                         
+                          <div class="form-check">
+                            <h4>Ostalo</h4>
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">Dečija psihologija</label>
+                          </div>
+                          
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">Anksioznost</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1">  Lićni rast i razvoj</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1"> Depresija</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1"> Prokrastinacija </label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                            <label class="form-check-label" for="check1"> Roditeljstvo </label>
+                          </div>
+                         <button class="btn btnSearch">Pretraži</button>
+                    </div>
+           
+                
+                    <div class="col-lg-8">
+
+                        <!-- Doctor Widget -->
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <div class="doctor-widget">
+                                    <div class="doc-info-left">
+                                        <div class="doctor-image">
+                                            <a href="doctor.html">
+                                                <img src="img/doc1.jpg" class="img-fluid" alt="User Image">
+                                            </a>
+                                        </div>
+                                        <div class="doc-info-cont">
+                                            <h4 class="doc-name"><a href="doctor.html">Jovana Jovanovic</a></h4>
+                                            <p class="doc-speciality"> Psihoterapeut</p>
+                                           
+                                            <div class="rating">
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star"></i>
+                                                <span class="d-inline-block average-rating">(17)</span>
+                                            </div>
+                                            <div class="clinic-services p-2">
+                                                <span>Psihoterapija</span>
+                                                <span> Grupna psihoterapija</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doc-info-right">
+                                        <div class="clini-infos">
+                                            <ul>
+                                                <li><i class="fa fa-thumbs-up"></i> 98%</li>
+                                                <li><i class="fa fa-comment"></i> 17 Feedback</li>
+                                                <li><i class="fa fa-map-marker"></i> Beograd</li>
+                                                <li><i class="fa fa-money"></i> 1500 - 3500 RSD <i class="fa fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clinic-booking">
+                                            <a class="view-pro-btn" href="doctor.html">Profil doktora</a>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Doctor Widget -->
+                        <!-- Doctor Widget -->
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <div class="doctor-widget">
+                                    <div class="doc-info-left">
+                                        <div class="doctor-image">
+                                            <a href="doctor.html">
+                                                <img src="img/doc2.jpg" class="img-fluid" alt="User Image">
+                                            </a>
+                                        </div>
+                                        <div class="doc-info-cont">
+                                            <h4 class="doc-name"><a href="doctor.html">Jovana Jovanovic</a></h4>
+                                            <p class="doc-speciality"> Psihoterapeut</p>
+                                           
+                                            <div class="rating">
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star"></i>
+                                                <span class="d-inline-block average-rating">(17)</span>
+                                            </div>
+                                            <div class="clinic-services p-2">
+                                                <span>Psihoterapija</span>
+                                                <span> Grupna psihoterapija</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doc-info-right">
+                                        <div class="clini-infos">
+                                            <ul>
+                                                <li><i class="fa fa-thumbs-up"></i> 98%</li>
+                                                <li><i class="fa fa-comment"></i> 17 Feedback</li>
+                                                <li><i class="fa fa-map-marker"></i> Beograd</li>
+                                                <li><i class="fa fa-money"></i> 1500 - 3500 RSD <i class="fa fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clinic-booking">
+                                            <a class="view-pro-btn" href="doctor.html">Profil doktora</a>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Doctor Widget -->
+                         <!-- Doctor Widget -->
+                         <div class="card mt-2">
+                            <div class="card-body">
+                                <div class="doctor-widget">
+                                    <div class="doc-info-left">
+                                        <div class="doctor-image">
+                                            <a href="doctor.html">
+                                                <img src="img/doc3.jpg" class="img-fluid" alt="User Image">
+                                            </a>
+                                        </div>
+                                        <div class="doc-info-cont">
+                                            <h4 class="doc-name"><a href="doctor.html">Jovana Jovanovic</a></h4>
+                                            <p class="doc-speciality"> Psihoterapeut</p>
+                                           
+                                            <div class="rating">
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star"></i>
+                                                <span class="d-inline-block average-rating">(17)</span>
+                                            </div>
+                                            <div class="clinic-services p-2">
+                                                <span>Psihoterapija</span>
+                                                <span> Grupna psihoterapija</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doc-info-right">
+                                        <div class="clini-infos">
+                                            <ul>
+                                                <li><i class="fa fa-thumbs-up"></i> 98%</li>
+                                                <li><i class="fa fa-comment"></i> 17 Feedback</li>
+                                                <li><i class="fa fa-map-marker"></i> Beograd</li>
+                                                <li><i class="fa fa-money"></i> 1500 - 3500 RSD<i class="fa fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clinic-booking">
+                                            <a class="view-pro-btn" href="doctor.html">Profil doktora</a>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Doctor Widget -->                       
+                        <!-- Doctor Widget -->
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <div class="doctor-widget">
+                                    <div class="doc-info-left">
+                                        <div class="doctor-image">
+                                            <a href="doctor.html">
+                                                <img src="img/doc1.jpg" class="img-fluid" alt="User Image">
+                                            </a>
+                                        </div>
+                                        <div class="doc-info-cont">
+                                            <h4 class="doc-name"><a href="doctor.html">Jovana Jovanovic</a></h4>
+                                            <p class="doc-speciality"> Psihoterapeut</p>
+                                           
+                                            <div class="rating">
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star filled"></i>
+                                                <i class="fa fa-star"></i>
+                                                <span class="d-inline-block average-rating">(17)</span>
+                                            </div>
+                                            <div class="clinic-services p-2">
+                                                <span>Psihoterapija</span>
+                                                <span> Grupna psihoterapija</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="doc-info-right">
+                                        <div class="clini-infos">
+                                            <ul>
+                                                <li><i class="fa fa-thumbs-up"></i> 98%</li>
+                                                <li><i class="fa fa-comment"></i> 17 Feedback</li>
+                                                <li><i class="fa fa-map-marker"></i> Beograd</li>
+                                                <li><i class="fa fa-money"></i>1500 - 3500 RSD <i class="fa fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clinic-booking">
+                                            <a class="view-pro-btn" href="doctor.html">Profil doktora</a>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Doctor Widget -->
+                        <div class="text-center mt-2">
+                            <a class="btn load-more" href="">Učitaj više</a>	
+                        </div>	
+                    </div>
+                </div>
+
+            </div>
+
+        </div>		
+        <!-- /Page Content -->
+
+
+
+<!-- footer -->  
+    <section>
+        <div class="container-fluid p-5" id="footerTop">
+          <h2>ZAKAŽITE PREGLED ONLINE ILI NAS POZOVITE NA 012-345-678</h2>
+          <button class="btn btnFooterTop">ZAKAŽI BESPLATNU KONSULTACIJU</button>
+        </div>
+      </section>
+    
+  
+      <div class="conatiner-fluid" id="map">
+        <img src="img/mapa.png" alt="mapa">
+      </div>
+    <!-- Footer -->   
+    <div class="container-fluid footer p-5">
+    
+        <div class="container">
+        <footer> 
+            <div class="row rowFooter">
+                <div class="col-md-6  mt-3 footerLogo">
+                    <img src="img/onlinemedica2.png" alt="logo">
+                </div>
+                
+                <div class="col-md-6 right mt-1 footerText ">
+                    <h4 class="">PSIHOTERAPIJSKO SAVETOVALISTE</h4>
+                    <p class="textFooter ">Poverljivo psihoterapijsko savetovalište kome možeš da pristupaš sam/a iz svog doma, čak i potpuno anonimno.</p>
+                    <button class="btn btnFooter">ZAKAŽI BESPLATNU KONSULTACIJU</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>  
+       <!-- Copyright --> 
+    <!--END FOOTER-->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </body>
+    </html>

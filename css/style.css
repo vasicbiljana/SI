@@ -1,5 +1,6 @@
-body{
-    overflow-x: hidden;
+html, body{
+    max-width: 100%;
+    overflow-x: hidden !important;
 }
 header{
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../img/cover2.jpg");
@@ -8,11 +9,20 @@ header{
     background-size: cover;
     background-position: center;
 }
-
+section{
+    width: 100%;
+}
 .btnLogin{
     width: 150px;
     font-weight: 500;
     background-color: #017A99;
+    border: 1px solid #017A99;
+    color: white;
+
+}
+.btnLogin:hover{
+    background-color: white;
+    color: #017A99;
     border: 1px solid #017A99;
 
 }
@@ -43,7 +53,14 @@ header{
     font-weight: 500;
     background-color: #017A99;
     border: 1px solid #017A99;
+    color: white;
     margin-left: auto;
+}
+.btnBanner:hover{
+    background-color: white;
+    color: #017A99;
+    border: 1px solid #017A99;
+  
 }
 .hSpan{
 
@@ -109,7 +126,16 @@ header{
 
 }
 
-
+.desc{
+    padding-top: 50px;
+}
+.desc h2{
+    margin: 20px 20px;
+}
+.desc p{
+    font-size: 18px;
+    margin: 20px 20px;
+}
 #footerTop{
     background-color: #017A99;
     color: white;
@@ -126,13 +152,15 @@ header{
     background-color: white;
   }  
 
-#map iframe{
+#map {
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
-  .footer{
-      /*background-color: #017A99;*/
-  }
+
+#map img{
+    width: 100%;
+    height: 100%;
+}
   .textFooter{
       font-size: 23px;
   }
@@ -152,6 +180,21 @@ header{
       color: white;
       background-color: #017A99;
   }
+  .rowFooter{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .footerLogo{
+    width: 200px;
+    height: 130px;
+
+}
+.footerLogo img{
+    width: 100%;
+    height: 100%;
+
+}
 
   /* LOGIN */
 .containerLogin{
@@ -165,15 +208,29 @@ header{
   }
   .btnSubmitLogin{
       width: 100%;
+      height: 40px;
       background-color: #017A99;
+      color: white;
+      border: 1px solid #017A99;
+      border-radius: 5px;
   }
-
+  .btnSubmitLogin:hover{
+    background-color: white;
+   color: #017A99;
+   border: 1px solid #017A99;
+}
   .btnAnonymous{
       width: 100%;
       background-color: white;
       color: #017A99;
       border: 1px solid #017A99
   }
+  .btnAnonymous:hover{
+
+    background-color: #017A99;
+    color: white;
+    border: 1px solid #017A99
+}
 .ce{
     text-align: center;
     align-items: center;
@@ -199,7 +256,7 @@ header{
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: #2c4964;
+    color: #017A99;
 }
 
 .section-title h2::after {
@@ -208,26 +265,47 @@ header{
     display: block;
     width: 40px;
     height: 3px;
-    background: #1977cc;
+    background: #017A99;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+.doctor-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.doctor-title h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: black;
+}
+
+.doctor-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #017A99;
     bottom: 0;
     left: calc(50% - 20px);
 }
 .member{
     position: relative;
-    box-shadow: 0px 2px 15px rgb(44 73 100 / 8%);
-    padding: 5%;
+    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.426);
     border-radius: 10px;
 }
 
-.member .pic img {
+.pic img {
     border-radius:50%;
+    margin: 30px 10px;
 }
-.member .pic .booking {
+.booking {
     display: inline-block;
-    padding: 12px;
-    margin-top: 30px;
-    margin-left: 20px;
-    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: 500;
@@ -236,21 +314,26 @@ header{
     text-decoration: none;
     color: #fff;
     background: #017A99;
+    border: 1px solid #017A99;
+}
+.booking:hover {
+    background-color: #fff;
+    color: #017A99;
+    border: 1px solid #017A99;
 }
 
-.member .member-info{
-    padding-left: 50px;
+.member-info{
+    padding:15px 15px
 }
-.doctors .member h4 {
+.member-info h4 {
     font-weight: 700;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 22px;
     color: #2c4964;
 }
 
-.doctors .member p {
-    margin: 10px 0 0 0;
-    font-size: 14px;
+ .member-info p {
+    font-size: 18px;
 }
 .doctors .member .social {
     margin-top: 12px;
@@ -258,16 +341,6 @@ header{
     align-items: center;
     justify-content: flex-start;
 
-}
-.doctors .member .social span {
-    transition: ease-in-out 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    padding: 2%;
-    background: #a0bcd5;
-    margin-left: 0.5rem;
 }
 
 
@@ -279,9 +352,8 @@ header{
     padding: 2%;
 }
 .card-body{
-   /* background-color: red;*/
-   border: 1px solid #017A99;
-    
+   border: 1px solid rgba(0, 0, 0, 0.358);
+   border-radius: 10px;
 }
 .head{
     background-color: #017A99;
@@ -306,13 +378,14 @@ header{
     width: 100%;
     background-color: #017A99;
     color: white;
-    padding: 2%;
-    font-size: 20px;
+    height: 40px;
+    font-size: 18px;
     -webkit-box-shadow: 5px 5px 10px -2px #017A99;
     -moz-box-shadow: 5px 5px 10px -2px  #017A99;
     box-shadow: 5px 5px 10px -2px  #017A99;
-    font-weight: 700;
-    border: 2px solid #017A99;
+    font-weight: 600;
+    border: 1px solid #017A99;
+    border-radius: 5px;
 }
 #btnContact:hover{
     width: 100%;
@@ -324,25 +397,28 @@ header{
     box-shadow: 5px 5px 10px -2px  #017A99;
 }
 
-
+.error{
+    color: red;
+    font-style: italic;
+}
 /* end contact*/
 
 /*doctor */
 
 .table{
     border:1px solid rgba(0, 0, 0, 0.068);
-    padding: 5%;
+    padding: 1%;
+   
 }
 
-
+#table{
+  
+    overflow-x : auto;
+}
 .termin.td{
     background-color: aqua;
 }
 
-.doctor-img{
-    
-    background-color: #017b99bb;
-}
 .doctor-img img{
     width: 100%;
     height: 100%;
@@ -362,9 +438,542 @@ header{
     color: white;
     position: absolute;
     right: 0;
+    text-decoration: none !important;
+}
+.btnTermin:hover{
+    background-color: white;
+    color: #017A99;
+   border: 1px solid #017A99;
+}
+/* PAYMENT */
+.blue-banner{
+    background-color: #017A99;
+    color: white;
+    padding: 20px 100px;
+}
+.card{
+    border: none;
+}
+.card-header{
+    background: none !important;
+    padding: 1%;
+    border-bottom: none !important;
+}
+.info-widget {
+   border-radius: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.card-label > label {
+    background-color: #fff;
+    color: #959595;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 6px auto auto 8px;
+    padding: 0 7px;
+}
+.card-label > input {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05);
+    display: block;
+    height: 50px;
+    margin-top: -13px;
+    padding: 5px 15px 0;
+    transition: border-color .3s;
+    width: 100%;
+}
+.exist-customer a {
+	color: #017A99;
+	font-weight: 500;
+}
+.payment-widget .payment-list + .payment-list {
+	margin-bottom: 15px;
+}
+.payment-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 600;
+    color: #272b41;
+    
+}
+.payment-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.payment-radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    margin: 3px 0 0 0;
+    border: 2px solid #ddd;
+        border-top-color: rgb(221, 221, 221);
+        border-right-color: rgb(221, 221, 221);
+        border-bottom-color: rgb(221, 221, 221);
+        border-left-color: rgb(221, 221, 221);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+
+}
+.payment-radio input:checked ~ .checkmark {
+    border-color: #017A99;
+}
+.payment-radio .checkmark::after {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    content: '';
+    width: 9px;
+    height: 9px;
+    background-color:#017A99;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.payment-radio input:checked ~ .checkmark::after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.boototal-costking-date {
+    padding: 0;
+    list-style: none;
+}
+.booking-date li {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #272b41;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.booking-date li span {
+    float: right;
+    color: #757575;
+    font-weight: 400;
+    font-size: 15px;
+}
+.booking-total {
+    border-top: 1px solid #e4e4e4;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.booking-total ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+.booking-total ul li span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #272b41;
+}
+.booking-total ul li .total-cost {
+    color: #017A99;
+    font-size: 16px;
+    font-weight: 700;
+    float: right;
+}
+.booking-info{
+    padding: 10px;
+}
+.booking-info a{
+   color: #017A99;
+   text-decoration: none;
+}
+.booking-doc-img{
+    background-color: #017A99;
+  
+}
+.booking-doc-info{
+    display: flex;
+ flex-direction: column;
+ align-items: center;
+
+}
+.booking-doc-info img{
+    width: 300px;
+    height: 300px;
+
+}
+.btnPayment{
+    background-color: #017A99;
+    color: white;
+}
+.btnPayment:hover{
+    background-color: white;
+    color: #017A99;
+    border: 1px solid #017A99;
 
 }
 
+/* SEARCH DOCTOR */
+.category{
+    background-color: #017A99;
+border-radius: 10px;
+    color: rgb(255, 255, 255);
+    height: 500px;
+}
+
+.btnSearch{
+    background-color: white;
+    color: #017A99;
+    font-weight: 700;
+    margin-top:20px;
+    width:100%;
+
+}
+.btnSearch:hover{
+    background-color: rgba(199, 199, 199, 0.742);
+    color: white;
+    border: 1px solid #017A99;
+
+
+}
+.filter-widget {
+	margin-bottom: 20px;
+}
+.filter-widget h4 {
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
+.filter-widget .custom_check {
+	line-height: 18px;
+}
+
+.doctor-widget {
+	display: flex;
+    justify-content: space-around;
+}
+.doc-info-left {
+
+	display: flex;
+}
+
+.doctor-image {
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    margin-right: 20px;
+    width: 150px;
+}
+.doctor-image img {
+	border-radius: 5px;
+}
+
+.doctor-widget .doc-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 3px; 
+    width: 100%;
+}
+.doctor-widget .doc-name a{
+    color: #017A99;
+    text-decoration: none;
+}
+.doc-speciality {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 15px;
+}
+.doctor-widget .rating i {
+	font-size: 14px;
+ 
+}
+
+.doctor-widget .average-rating {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.clinic-services {
+    color: #272b41;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    font-size: 15px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.clinic-services span {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 3px 5px;
+}
+
+.clini-infos {
+    margin-bottom: 15px;
+}
+.clini-infos ul {
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.clini-infos ul li {
+    display: block;
+    line-height: 30px;
+    color: #4E4852;
+}
+.clini-infos ul li i {
+    font-size: 15px;
+    min-width: 30px;
+}
+.clinic-booking a + a {
+	margin-top: 15px;
+}
+.clinic-booking a {
+    background-color: #fff;
+    border: 2px solid #017A99;
+    border-radius: 4px;
+    color: #017A99;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    text-decoration: none;
+}
+.clinic-booking a.view-pro-btn:hover, .clinic-booking a.view-pro-btn:focus {
+	background: #017A99;
+	color: #fff;
+}
+.clinic-booking a.apt-btn {
+    background-color: #017A99;
+    color: #fff;
+}
+.clinic-booking a.apt-btn:hover, .clinic-booking a.apt-btn:focus {
+	background-color: #017A99;
+	border-color: #017A99;
+	color: #fff;
+}
+.load-more {
+	margin-bottom: 30px;
+    background-color: #017A99;
+    color: white;
+    font-weight: 700;
+}
+
+.form-check-input{
+    margin-left: 50px !important;
+
+}
+.form-check-label{
+    margin-left: 10px !important;
+}
+
+/*END DOCTOR SEARCH */
+
+/* ADMIN PANEL */
+.sidebar {
+    background-color: #ffffffbe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 60px;
+}
+
+.sidebar-menu ul {
+	font-size: 22px;
+	list-style-type: none;
+
+	padding-top: 20px;
+    margin-top: 20px;
+	position: relative;
+}
+.sidebar-menu li a {
+	color: #017A99;
+	display: block;
+	font-size: 18px;
+	height: auto;
+	padding: 5px 20px;
+    text-decoration: none;
+
+}
+ .sidebar-menu li:hover {
+background-color: #017A99;
+width: 80%;
+color: white;
+border-radius: 2px;
+
+}
+.sidebar-menu li a:hover {
+    color: white;
+    
+    }
+.menu-title{
+    font-size: 25px;
+    font-weight: 600;
+    color: #2c4964;
+}
+.main-wrapper {
+	width: 100%;
+	height: 100vh;
+	min-height: 100vh;
+    background-color: rgba(16, 16, 16, 0.666);
+}
+.page-wrapper {
+	padding-top: 5px;
+	position: relative;
+	transition: all 0.4s ease;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.page-title {
+    color: #333;
+    margin-bottom: 5px;
+}
+#table{
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+#table thead tr th{
+    font-size: 25px;
+    font-weight: 600;
+    color: #2c4964;
+
+}
+.table-avatar{
+    font-size: 18px;
+   padding-top: 10px;
+}
+.table-avatar a{
+    color: #017A99;
+}
+.table-time{
+    color:#017A99;
+    font-weight: 600;
+}
+.table-specialist p{
+    margin-top: 10px !important;
+    font-size: 18px;
+ 
+}
+.check{
+    width: 18px;
+    height: 18px;
+    margin-left: 25px;
+}
+/*END ADMIN PANEL */
+
+/*Admin Panel - kategory */
+.table-edit-delete{
+    font-size: 18px;
+    padding-top: 15px;
+}
+.table-edit-delete a{
+    color: #017A99;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.add{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add a{
+   color: #017A99;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #017A99;
+}
+.add a:hover{
+     color: white;
+     border:1px solid white;
+     color: white;
+     background-color: #017A99;
+ }
+.edit{
+    background-color: rgba(15, 183, 107,0.12) !important;
+    color: #26af48 !important;
+    padding: 2%;
+    border-radius: 5px;
+}
+.delete{
+    background-color: rgba(242, 17, 54,0.12) !important;
+    color: #e63c3c !important;
+    padding: 2%;
+    border-radius: 5px;
+}
+.zoom{
+    background-color: rgba(2, 137, 182, 0.12) !important;
+    color: #1d97b9 !important;
+    padding: 2%;
+    border-radius: 5px;
+}
+#start{
+    background-color: #017A99;
+    color: white;
+    border: 1px solid #017A99;
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+
+.input.group-append{
+    cursor: pointer;
+}
+.pac-widget{
+    margin-bottom: 0px!important;
+}
+
+.modal-title{
+    color: #017A99;
+}
+.modal-footer .btnEdit{
+    background-color: #017b9965;
+    color: #017A99;
+    padding: 2%;
+    border-radius: 5px;
+    font-weight: 700;
+}
 /*MEDIA */
 
 
@@ -383,6 +992,11 @@ header{
 @media (max-width : 1200px) {
     .nav-link{
         font-size: 17px;
+    }
+    .booking-doc-info img{
+        width: 200px;
+        height: 200px;
+    
     }
     
 }
@@ -404,8 +1018,15 @@ header{
     margin-top: 5%;
     }
 
-}
 
+}    
+@media (max-width:1000px) {
+    .descImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 @media (max-width:900px) {
     .aboutLeft h1{
         font-size: 25px;
@@ -424,12 +1045,105 @@ header{
     margin-top: 5%;
     }
 
-}
 
+}
+@media (max-width:800px) {
+   .clinic-booking a {
+       font-size: 10px;
+    padding: 5px 10px;
+    }
+    .booking-doc-info img{
+        width: 300px;
+        height: 300px;
+    
+    }
+}
 
 @media (max-width:720px) {
    .about{
        flex-direction: column;
    }
-
+   #map{
+      display: none;
+   }
+ 
+   .footerLogo{
+       width: 150px;
+       height: 100px;
+   }
+   .footerText{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+        .textFooter{
+    font-size: 18px;
+    text-align: center;
+    }
 }
+
+@media (max-width:550px) {
+    .doctor-widget {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .doc-info-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ .doctor-image {
+    flex: 0 0 400px;
+    width: 400px;
+   text-align: center;
+    }
+    .member{
+        display: flex;
+        flex-direction: column;
+    }
+    .pic{
+        margin: 10px 40px;
+    }
+ }
+
+ @media (max-width:450px) {
+   
+ .doctor-image {
+    flex: 0 0 200px;
+    width: 200px;
+   text-align: center;
+    }
+    .blue-banner {
+        padding: 20px 15px;
+    }
+    .blue-banner h1{
+        font-size: 20px;
+    }
+    #footerTop {
+        flex-direction: column;
+    }
+    #footerTop h2{
+        font-size: 20px;
+      
+    }
+   .footerText h4{
+    font-size: 20px;
+    text-align: center;
+    }
+
+    .pic{
+        margin: 10px 20px;
+    }
+
+ }
+ 
+ @media (max-width:400px) {
+ .booking-doc-info img{
+    width: 220px;
+    height: 220px;
+}
+ }

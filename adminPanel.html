@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebMedica</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light pt-2">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="img/onlinemedica.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link activeLink" aria-current="page" href="index.html">POČETNA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#about">O NAMA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="search-doctors.html">ZAKAŽI SEANSU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">KONTAKT</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0"> 
+      <!-- Mesto za sesiju-->
+           </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid blue-banner">
+        <h1>Admin Panel </h1>
+    </div>
+    <!-- End Navbar -->
+<!-- Header, Banner image, text -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="sidebar" id="sidebar">
+            	<div class="sidebar-inner slimscroll">
+                	<div id="sidebar-menu" class="sidebar-menu">
+                   		<ul>
+                        <li class="menu-title"> 
+                            <span>Admin Panel</span>
+                        </li>
+                        <li class="active"> 
+                            <a href="adminPanel.html"><i class="fa fa-home"></i> <span>Početna</span></a>
+                        </li>
+                        <li> 
+                            <a href="category.html"><i class="fa fa-users" ></i> <span>Kategorije</span></a>
+                        </li>
+                        <li> 
+                            <a href="doctors.html"><i class="fa fa-user-md" aria-hidden="true"></i> <span>Doktori</span></a>
+                        </li>
+                        <li> 
+                            <a href="patients.html"><i class="fa fa-user-plus"></i> <span>Pacijenti</span></a>
+                        </li>
+                        <li> 
+                            <a href="reviews.html"><i class="fa fa-comments-o" aria-hidden="true"></i> <span>Recenzije</span></a>
+                        </li>
+                        
+                        
+                        <li class="menu-title"> 
+                            <span>Stranice</span>
+                        </li>
+                        <li> 
+                            <a href="profilDoctor.html"><i class="fa fa-user"></i> <span>Profil</span></a>
+						<li> 
+							<a href="#"><i class="fa fa-sign-out"></i> <span>Odjava</span></a>
+						</li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div>
+        <div class="col-lg-9">
+            <!-- Page Wrapper -->
+            <div class="page-wrapper">
+                <div class="content container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+						
+							<!-- Recent Orders -->
+							<div class="dashboard">
+								<div class="dasboard-body">
+									<div class="table-responsive">
+										<table class="datatable table table-hover table-center mb-0" id="table">
+											<thead>
+												<tr>
+													<th>Doktor</th>
+													<th>Specijalista</th>
+													<th>Pacijent</th>
+													<th>Zakazani termin</th>
+													<th>Status</th>
+													<th class="text-right">Cena</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<h2 class="table-avatar">
+															<a href="doctor.html">Jovana Jovanovic</a>
+														</h2>
+													</td>
+													<td class="table-specialist">
+														<p>Psihijatar</p>
+													</td>
+													<td>
+														<h2 class="table-avatar">
+															<a href="profile.html"> Pera Peric</a>
+														</h2>
+													</td>
+													<td>9 Jul 2022 <span class="table-time d-block">11.00 AM - 11.30 AM</span></td>
+													<td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_1" class="check" >
+														<div class="d-block">
+															<label for="status_1" class="checktoggle">potvrđeno</label>
+														</div>	
+														</div>
+													</td>
+													<td class="text-right pt-4">
+														5000 RSD
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2 class="table-avatar">
+															<a href="doctor.html">Jovana Jovanovic</a>
+														</h2>
+													</td>
+													<td class="table-specialist">
+														<p>Psihijatar</p>
+													</td>
+													<td>
+														<h2 class="table-avatar">
+															<a href="profile.html"> Pera Peric</a>
+														</h2>
+													</td>
+													<td>9 Jul 2022 <span class="table-time d-block">11.00 AM - 11.30 AM</span></td>
+													<td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_1" class="check" >
+															<div class="d-block">
+																<label for="status_1" class="checktoggle">potvrđeno</label>
+															</div>	
+														</div>
+													</td>
+													<td class="text-right pt-4">
+														5000 RSD
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2 class="table-avatar">
+															<a href="doctor.html">Jovana Jovanovic</a>
+														</h2>
+													</td>
+													<td class="table-specialist">
+														<p>Psihijatar</p>
+													</td>
+													<td>
+														<h2 class="table-avatar">
+															<a href="profile.html"> Pera Peric</a>
+														</h2>
+													</td>
+													<td>9 Jul 2022 <span class="table-time d-block">11.00 AM - 11.30 AM</span></td>
+													<td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_1" class="check" >
+															<div class="d-block">
+																<label for="status_1" class="checktoggle">potvrđeno</label>
+															</div>	
+														</div>
+													</td>
+													<td class="text-right pt-4">
+														5000 RSD
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2 class="table-avatar">
+															<a href="doctor.html">Jovana Jovanovic</a>
+														</h2>
+													</td>
+													<td class="table-specialist">
+														<p>Psihijatar</p>
+													</td>
+													<td>
+														<h2 class="table-avatar">
+															<a href="profile.html"> Pera Peric</a>
+														</h2>
+													</td>
+													<td>9 Jul 2022 <span class="table-time d-block">11.00 AM - 11.30 AM</span></td>
+													<td>
+														<div class="status-toggle">
+															<input type="checkbox" id="status_1" class="check" checked >
+															<div class="d-block">
+																<label for="status_1" class="checktoggle">potvrđeno</label>
+															</div>	
+														</div>
+													</td>
+													<td class="text-right pt-4">
+														5000 RSD
+													</td>
+												</tr>
+										
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- /Recent Orders -->
+							
+						</div>
+					</div>
+				</div>			
+			</div>
+			<!-- /Page Wrapper -->
+        </div>
+    </div>
+</div>
+   		<!-- Main Wrapper -->
+     
+			<!-- /Sidebar -->
+			
+			
+		
+			<!-- /Page Wrapper -->
+		
+        </div>
+		<!-- /Main Wrapper -->
+
+<!--END FOOTER-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</body>
+</html>
