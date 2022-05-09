@@ -948,6 +948,9 @@ border-radius: 2px;
     padding: 2%;
     border-radius: 5px;
 }
+#jitsi-container{
+    overflow-x: auto;
+}
 #start{
     background-color: #017A99;
     color: white;
