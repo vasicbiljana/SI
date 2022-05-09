@@ -26,6 +26,9 @@ section{
     border: 1px solid #017A99;
 
 }
+.fa-user{
+    color: #017A99;
+}
 .nav-link{
     color: black !important;
     font-weight: 500;
@@ -977,6 +980,23 @@ border-radius: 2px;
     border-radius: 5px;
     font-weight: 700;
 }
+
+/*PROFIL */
+
+.booking-pac-img img{
+    width: 150px;
+        height: 150px
+}
+/* PROFIL END */
+.control-box{
+    font-size: 25px;
+}
+.control-box a{
+    text-decoration: none;
+    color: #017A99;
+    margin-left: 10px;
+}
+
 /*MEDIA */
 
 
@@ -1047,7 +1067,10 @@ border-radius: 2px;
     height: 150px;
     margin-top: 5%;
     }
-
+    .booking-pac-img img{
+        width: 100px;
+            height: 100px
+    }
 
 }
 @media (max-width:800px) {
@@ -1060,6 +1083,11 @@ border-radius: 2px;
         height: 300px;
     
     }
+    .booking-pac-img img{
+        width: 300px;
+            height: 300px
+    }
+
 }
 
 @media (max-width:720px) {
@@ -1148,5 +1176,10 @@ border-radius: 2px;
  .booking-doc-info img{
     width: 220px;
     height: 220px;
-}
+    }
+    .booking-pac-img img{
+        width: 150px;
+            height: 150px
+    }
+
  }
